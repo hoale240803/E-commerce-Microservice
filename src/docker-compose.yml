@@ -10,5 +10,9 @@ services:
       context: .
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
 
+  basketdb:
+    image: redis:alpine
+    
+
 volumes:
   mongo_data:
