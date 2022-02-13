@@ -18,6 +18,7 @@ services:
     build:
       context: .
       dockerfile: Services/Basket/Basket.API/Dockerfile
+
   portainer:
     image: portainer/portainer-ce
 
@@ -27,6 +28,11 @@ services:
   pgadmin:
     image: dpage/pgadmin4
 
+  discount.api:
+    image: ${DOCKER_REGISTRY-}discountapi
+    build:
+      context: .
+      dockerfile: Services/Discount/Discount.API/Dockerfile
     
 
 volumes:
