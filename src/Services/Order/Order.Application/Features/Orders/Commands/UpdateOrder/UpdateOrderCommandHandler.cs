@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Order.Application.Contracts.Persistence;
-
+using Order.Application.Exceptions;
 
 namespace Order.Application.Features.Orders.Commands.UpdateOrder
 {
