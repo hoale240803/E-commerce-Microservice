@@ -1,23 +1,27 @@
-var builder = WebApplication.CreateBuilder(args);
+using Order.API;
+using Order.API.Extensions;
+using Order.Infrastructure.Persistence;
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+public class Program
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    public static void Main(string[] args)
+    {
+        CreateHostBuilder(args)
+            .Build()
+            .MigrateDatabase<OrderContext>((context, services) =>
+            {
+                var logger = services.GetService<ILogger<OrderContextSeed>>();
+                OrderContextSeed
+                    .SeedAsync(context, logger)
+                    .Wait();
+            })
+            .Run();
+    }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
 }
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();

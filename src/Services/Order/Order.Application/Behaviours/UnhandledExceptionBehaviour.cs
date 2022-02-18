@@ -1,10 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
 
-
 namespace Order.Application.Behaviours
 {
-    public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : MediatR.IRequest<TResponse>
     {
         private readonly ILogger<TRequest> _logger;
 
