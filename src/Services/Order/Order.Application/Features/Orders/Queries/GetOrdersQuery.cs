@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using MediatR;
-using Order.Application.Contracts.Persistence;
+﻿using MediatR;
 
 namespace Order.Application.Features.Orders.Queries
 {

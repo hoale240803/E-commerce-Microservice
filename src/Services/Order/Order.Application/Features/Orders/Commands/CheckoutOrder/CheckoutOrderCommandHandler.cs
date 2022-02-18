@@ -5,7 +5,7 @@ using Order.Application.Contracts.Infrastructure;
 using Order.Application.Contracts.Persistence;
 using Order.Application.Models;
 
-namespace Order.Application.Features.CheckoutOrder
+namespace Order.Application.Features.Orders.Commands.CheckoutOrder
 {
     public class CheckoutOrderCommandHandler: IRequestHandler<CheckoutOrderCommand, int>
     {

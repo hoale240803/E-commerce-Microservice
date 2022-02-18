@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using Order.Application.Contracts.Persistence;
 using Order.Application.Exceptions;
 
-namespace Order.Application.Features.DeleteOrder
+namespace Order.Application.Features.Orders.Commands.DeleteOrder
 {
     public class DeleteOrderCommandHandler : IRequestHandler<DeleteOrderCommand>
     {
