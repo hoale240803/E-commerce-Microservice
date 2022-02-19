@@ -92,7 +92,7 @@ namespace Basket.API.Controllers
             }
 
             return Ok(await _redisRepository.UpdateBasket(basket));
-        }
+        }   
 
         [HttpDelete("{userName}", Name = "DeleteBasket")]
         [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]

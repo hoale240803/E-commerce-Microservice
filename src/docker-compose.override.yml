@@ -34,10 +34,12 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - "CacheSettings:ConnectionString=basketdb:6379"
       - "GrpcSettings:DiscountUrl=http://discount.grpc"
+
     depends_on:
       - basketdb
     ports:
       - "8001:80"
+
   portainer:
     container_name: portainer
     restart: always
@@ -59,6 +61,7 @@ services:
         - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+
 
   pgadmin:
     container_name: pgadmin
