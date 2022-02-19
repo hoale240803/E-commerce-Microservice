@@ -1,4 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
+using Order.Application;
+using Order.Infrastructure;
 
 namespace Order.API
 {
@@ -14,12 +16,11 @@ namespace Order.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddApplicationServices();
-            //services.AddInfrastructureServices(Configuration);
+            services.AddApplicationServices();
+            services.AddInfrastructureServices(Configuration);
 
             // MassTransit-RabbitMQ Configuration
             //services.AddMassTransit(config => {
-
             //    config.AddConsumer<BasketCheckoutConsumer>();
 
             //    config.UsingRabbitMq((ctx, cfg) => {
