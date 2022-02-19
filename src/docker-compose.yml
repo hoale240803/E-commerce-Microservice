@@ -40,6 +40,16 @@ services:
       context: .
       dockerfile: Services/Discount/Discount.Grpc/Dockerfile
 
+  orderdb:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+
+  order.api:
+    image: ${DOCKER_REGISTRY-}orderapi
+    build:
+      context: .
+      dockerfile: Services/Order/Order.API/Dockerfile
+
+
 
 volumes:
   mongo_data:

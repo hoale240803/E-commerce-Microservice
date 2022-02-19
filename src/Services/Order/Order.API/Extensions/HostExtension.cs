@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
 
 namespace Order.API.Extensions
 {

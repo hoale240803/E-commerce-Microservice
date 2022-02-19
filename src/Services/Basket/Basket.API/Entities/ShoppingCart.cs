@@ -24,7 +24,7 @@
                     totalprice += item.Price * item.Quantity;
                 }
                 return totalprice;
-            }
+            } 
         }
     }
 }
