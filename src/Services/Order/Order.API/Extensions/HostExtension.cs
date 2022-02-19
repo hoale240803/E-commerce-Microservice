@@ -45,7 +45,7 @@ namespace Order.API.Extensions
                                                     IServiceProvider services)
                                                     where TContext : DbContext
         {
-            //context.Database.Migrate();
+            context.Database.Migrate();
             seeder(context, services);
         }
     }
