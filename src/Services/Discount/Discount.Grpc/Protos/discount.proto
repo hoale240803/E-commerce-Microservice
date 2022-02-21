@@ -37,3 +37,4 @@ message DeleteDiscountRequest {
 message DeleteDiscountResponse {
 	bool success = 1;
 }
+

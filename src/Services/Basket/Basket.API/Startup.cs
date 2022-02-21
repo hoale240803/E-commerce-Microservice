@@ -31,6 +31,8 @@ namespace Basket.API
                     (opt => opt.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
 
                 services.AddScoped<DiscountGrpcService>();
+                //services.AddScoped<>();
+
                 services.AddControllers();
                 services.AddSwaggerGen(c =>
                 {
