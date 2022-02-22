@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EventBus.Messages.Events
+﻿namespace EventBus.Messages.Events
 {
     public class BasketCheckoutEvent : IntegrationBaseEvent
     {
@@ -13,6 +7,7 @@ namespace EventBus.Messages.Events
 
         // BillingAddress
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public string AddressLine { get; set; }
@@ -22,6 +17,7 @@ namespace EventBus.Messages.Events
 
         // Payment
         public string CardName { get; set; }
+
         public string CardNumber { get; set; }
         public string Expiration { get; set; }
         public string CVV { get; set; }
