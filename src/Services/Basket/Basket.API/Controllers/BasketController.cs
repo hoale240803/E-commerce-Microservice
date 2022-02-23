@@ -69,7 +69,7 @@ namespace Basket.API.Controllers
         [ProducesResponseType((int)HttpStatusCode.Accepted)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Checkout([FromBody] BasketCheckout basketCheckout)
-        {
+        { 
             // get existing basket with total price
             // Create basketCheckoutEvent -- Set TotalPrice on basketCheckout eventMessage
             // send checkout event to rabbitmq
