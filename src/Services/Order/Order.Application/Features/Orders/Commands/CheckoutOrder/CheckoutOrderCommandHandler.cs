@@ -25,6 +25,9 @@ namespace Order.Application.Features.Orders.Commands.CheckoutOrder
         public async Task<int> Handle(CheckoutOrderCommand request, CancellationToken cancellationToken)
         {
             var orderEntity = _mapper.Map<Domain.Entities.Order>(request);
+            orderEntity.LastModifiedBy = request.UserName;
+
+
             var newOrder = await _orderRepository.AddAsync(orderEntity);
 
             _logger.LogInformation($"Order {newOrder.Id} is successfully created.");
@@ -36,7 +39,7 @@ namespace Order.Application.Features.Orders.Commands.CheckoutOrder
 
         private async Task SendMail(Domain.Entities.Order order)
         {
-            var email = new Email() { To = "ezozkme@gmail.com", Body = $"Order was created.", Subject = "Order was created" };
+            var email = new Email() { To = "lehoa08121998@gmail.com", Body = $"Order was created.", Subject = "Order was created" };
 
             try
             {

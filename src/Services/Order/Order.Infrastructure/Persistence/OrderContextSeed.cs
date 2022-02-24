@@ -19,7 +19,7 @@ namespace Order.Infrastructure.Persistence
             return new List<Domain.Entities.Order>
             {
                 new Domain.Entities.Order() {
-                    UserName = "swn",
+                    UserName = "hoal",
                     FirstName = "Hoa",
                     LastName = "Le",
                     EmailAddress = "lehoa08121998@gmail.com",
