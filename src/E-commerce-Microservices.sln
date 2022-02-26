@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "Buildi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{DC7C1C83-CA3C-4B1F-B9EC-88DCF8BF1AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "ApiGateways\OcelotApiGateway\OcelotApiGateway.csproj", "{DF2A1680-E720-4475-810B-E2DDE8FB0C23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotApiGateway", "ApiGateways\OcelotApiGateway\OcelotApiGateway.csproj", "{DF2A1680-E720-4475-810B-E2DDE8FB0C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Aggregator", "ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj", "{C4B5C7AA-3284-4069-9392-A6DCA05FD8CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,10 @@ Global
 		{DF2A1680-E720-4475-810B-E2DDE8FB0C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF2A1680-E720-4475-810B-E2DDE8FB0C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF2A1680-E720-4475-810B-E2DDE8FB0C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B5C7AA-3284-4069-9392-A6DCA05FD8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B5C7AA-3284-4069-9392-A6DCA05FD8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B5C7AA-3284-4069-9392-A6DCA05FD8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B5C7AA-3284-4069-9392-A6DCA05FD8CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +114,7 @@ Global
 		{5E34AC5D-19A5-426C-887C-5B8B4407CAF5} = {10DDC720-20DD-443D-B1BD-78A2ED648DB0}
 		{847C6B59-3029-48B2-93EA-4FE034C1A7B2} = {3594DF1A-0090-4794-90B7-5F525372676B}
 		{DF2A1680-E720-4475-810B-E2DDE8FB0C23} = {DC7C1C83-CA3C-4B1F-B9EC-88DCF8BF1AE3}
+		{C4B5C7AA-3284-4069-9392-A6DCA05FD8CE} = {DC7C1C83-CA3C-4B1F-B9EC-88DCF8BF1AE3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {210AFB09-5893-4441-BB3C-3508C55FB08E}
