@@ -138,7 +138,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - "ApiSettings:CatalogUrl=http://catalog.api"
       - "ApiSettings:BasketUrl=http://basket.api"
-      - "ApiSettings:OrderingUrl=http://order.api"
+      - "ApiSettings:OrderUrl=http://order.api"
     depends_on:
       - catalog.api
       - basket.api
