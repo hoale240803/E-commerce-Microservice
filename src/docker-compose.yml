@@ -55,8 +55,8 @@ services:
   ocelotapigateway:
     image: ${DOCKER_REGISTRY-}ocelotapigateway
     build:
-        context: .
-        dockerfile: ApiGateways/OcelotApiGateway/Dockerfile
+      context: .
+      dockerfile: ApiGateways/OcelotApiGateway/Dockerfile
 
   shopping.aggregator:
     image: ${DOCKER_REGISTRY-}shoppingaggregator
